@@ -1,15 +1,28 @@
 def main():
     numbers = []
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
+    result = False
+    id = 0
+    previous = 0
+    while result == False:
+        user_num = int(input('Enter a number: '))
+        if id != 0:
+            if user_num<previous:
+                numbers.append(user_num)
+                result = False
+            else:
+                result = True
+                break
+        else: 
+            numbers.append(user_num)
+        previous = user_num
+        id = id + 1
+        
+    print('Output ')
 
+    print(numbers)
     ########################################
     # Do not delete the return statement
     ########################################
-    print(*numbers)
     return numbers
 
 
